@@ -4,7 +4,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f7f2e8;
+  background: #ffff;
   font-family: "Cormorant", serif;
   color: #111;
 }
@@ -36,6 +36,7 @@ body {
   margin: 0;
   font-size: 1.4rem;
   letter-spacing: 0.08em;
+  font-family: "orb-b", monospace;
 }
 
 .contact-box {
@@ -48,4 +49,5 @@ body {
 
 .contact-box p {
   margin: 0.2rem 0;
+  font-family: "Cormorant", serif;
 }
