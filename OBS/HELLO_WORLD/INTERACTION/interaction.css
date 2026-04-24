@@ -24,10 +24,13 @@ body {
 .label {
   font-family: 'OCRB', monospace;
   letter-spacing: 0.08em;
-  font-size: 33px;
+  font-size: 48px;
+  margin-top: 25px;
+  margin-bottom: 50px
 }
 
 .intro {
   line-height: 1.2;
   font-weight: bold;
+  font-size: 24px;
 }
