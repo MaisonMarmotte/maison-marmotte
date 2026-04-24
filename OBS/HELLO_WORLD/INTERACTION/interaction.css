@@ -115,8 +115,23 @@ a {
   padding-top: 24px;
 }
 
+
 .footer-note {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+
   border-top: 1px solid #111;
   padding-top: 24px;
   margin-top: 80px;
+}
+
+.footer-left {
+  max-width: 520px;
+}
+
+.footer-right img {
+  width: 48px;   
+  height: auto;
 }
