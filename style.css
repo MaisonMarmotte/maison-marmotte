@@ -51,3 +51,127 @@ body {
   margin: 0.2rem 0;
   font-family: "Cormorant", serif;
 }
+
+/* QUEST LINK */
+
+.quest-link {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: fit-content;
+
+  font-family: "OCRB", monospace;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: #111;
+  text-decoration: none;
+}
+
+.quest-text {
+  display: block;
+}
+
+.ecg-line {
+  display: block;
+  width: 100%;
+  height: 18px;
+  margin-top: 4px;
+}
+
+.ecg-line svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.ecg-line polyline {
+  fill: none;
+  stroke: #b30000;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.quest-link:hover .ecg-line polyline {
+  stroke-width: 3;
+}
+
+.ecg-line polyline {
+  stroke-dasharray: 320;
+  stroke-dashoffset: 320;
+  animation: ecg-pulse 3.2s ease-in-out infinite;
+}
+
+@keyframes ecg-pulse {
+  0% {
+    stroke-dashoffset: 320;
+    opacity: 0.25;
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  35% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+
+  70% {
+    stroke-dashoffset: 0;
+    opacity: 0.35;
+  }
+
+  100% {
+    stroke-dashoffset: -320;
+    opacity: 0.25;
+  }
+}
+
+/* Phone */
+
+@media (max-width: 700px) {
+  body {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .landing {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;              /* force one screen */
+    padding: 32px 20px;
+  }
+
+  .brand-block {
+    gap: 1rem;
+  }
+
+  .logo {
+    max-width: 160px;
+  }
+
+  .label {
+    font-size: 1.1rem;
+  }
+
+  .contact-box {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+    min-width: auto;
+  }
+
+  .quest-signal {
+    margin-top: auto;           /* pushes it toward bottom */
+  }
+
+  .quest-link {
+    font-size: 10px;
+  }
+
+  .ecg-line {
+    height: 14px;
+  }
+}
