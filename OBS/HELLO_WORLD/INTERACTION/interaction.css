@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  font-family: 'Cormorant', serif;
+  font-size: 20px;
+  line-height: 1.45;
+}
+
+.header {
+  margin-bottom: 80px;
+}
+
+.MM-title {
+  font-size: 42px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.section-title {
+  font-size: 28px;
+  margin: 8px 0 0;
+}
+
+.code-title {
+  font-family: 'OCRB', monospace;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  margin-top: 24px;
+}
