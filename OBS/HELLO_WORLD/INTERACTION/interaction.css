@@ -1,5 +1,5 @@
 body {
-  margin: 33px;
+  margin: 0px;
   font-family: 'Cormorant', serif;
   line-height: 1.45;
 }
@@ -7,6 +7,11 @@ body {
 .header {
   margin-bottom: 64 px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   
+  justify-content: center;
+  text-align: center;    
 }
 
 .MM-title {
@@ -39,7 +44,7 @@ body {
 .obs-page {
   width: min(760px, 88vw);
   margin: 0 auto;
-  padding: 72px 0 96px;
+  padding: 32px 0 96px;
 }
 
 
@@ -117,9 +122,9 @@ a {
 
 
 .footer-note {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+   display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
   gap: 40px;
 
   border-top: 1px solid #111;
@@ -134,4 +139,88 @@ a {
 .footer-right img {
   width: 48px;   
   height: auto;
+  justify-self: end;
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .header {
+    min-height: 80vh;
+    text-align: center;
+  }
+
+  .MM-title {
+    font-size: clamp(42px, 17vw, 72px);
+    line-height: 0.95;
+    margin: 0;
+  }
+
+  .section-title {
+    font-size: 28px;
+    margin: 14px 0 0;
+  }
+
+  .label {
+    font-size: 10px;
+    line-height: 1.5;
+    max-width: 280px;
+    margin: 18px auto 0;
+  }
+
+  .ruled-section {
+    padding: 18px 0 30px;
+    margin-bottom: 12px;
+  }
+
+  .section-label,
+  .spoiler-box summary,
+  .footer-note,
+  .label {
+    font-size: 10px;
+    letter-spacing: 0.08em;
+  }
+
+  .ruled-section p,
+  .ruled-section h4,
+  .spoiler-warning {
+    max-width: 100%;
+  }
+
+  .spoiler-warning {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .spoiler-box {
+    padding: 16px;
+    margin: 40px 0;
+  }
+
+  .footer-note {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-right {
+    justify-self: end;
+  }
+
+  .footer-logo {
+    width: 42px;
+    height: auto;
+  }
+}
+
+@media (max-width: 380px) {
+
+  .MM-title {
+    font-size: 44px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
 }
